@@ -65,14 +65,12 @@ async function handleRouting() {
                 break;
 
             case hash.startsWith('#checkout'):
-                // চেকআউট বা পেমেন্টের ফাইল শুধু যখন চেকআউটে যাবে তখনই লোড হবে
                 const checkout = await import('./trade/checkout.js');
                 if (checkout.init) checkout.init(container);
                 break;
 
             case hash === '#home':
             default:
-                // হোমপেজ রেন্ডারিং
                 break;
         }
     } catch (err) {
