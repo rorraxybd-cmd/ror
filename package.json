@@ -1,1 +1,25 @@
-
+{
+  "name": "rorraxy",
+  "version": "1.0.0",
+  "description": "Rorraxy Enterprise Platform - Retail, Wholesale, Seller, Affiliate, Admin, Business & Academy Ecosystem",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler pages dev .",
+    "deploy": "wrangler pages deploy . --project-name=rorraxy",
+    "db:migrate": "wrangler d1 execute rorraxy-db --file=./schema.sql"
+  },
+  "keywords": [
+    "rorraxy",
+    "ecommerce",
+    "cloudflare-pages",
+    "d1-database",
+    "r2-storage",
+    "single-page-application"
+  ],
+  "author": "Mr. Masudar Enterprise",
+  "license": "MIT",
+  "devDependencies": {
+    "wrangler": "^3.0.0"
+  }
+}
