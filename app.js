@@ -12,7 +12,6 @@ export const CONFIG = {
 
 // গ্লোবাল কোর মডিউল (যেগুলো সব পেজে বা ব্যাকগ্রাউন্ডে কমনভাবে লাগবে)
 const coreGlobalModules = [
-    './security-config/cspHeader.js',
     './management/store.js'
 ];
 
