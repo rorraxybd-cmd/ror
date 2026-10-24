@@ -1,1 +1,44 @@
+# ==========================================
+# RORRAXY ENTERPRISE GITIGNORE CONFIG
+# ==========================================
 
+# 1. Environment & Secret Keys (অতি গোপনীয় ফাইল)
+.env
+.env.local
+.env.production
+.env.*.local
+
+# 2. Node Modules (নির্ভরতা বা লাইব্রেরি ফোল্ডার - সাইজে অনেক বড় হয়, গিটহাবে আপলোড করতে হয় না)
+node_modules/
+jspm_packages/
+
+# 3. Build & Output Directories (ক্লাউডফ্লেয়ার বা লোকাল বিল্ড ফাইল)
+dist/
+build/
+.output/
+.vercel/
+.wrangler/
+
+# 4. OS & System Generated Files (উইন্ডোজ বা ম্যাকের নিজস্ব হিডেন ফাইল)
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# 5. Editor & IDE Settings (ভিএস কোড বা অন্যান্য এডিটর কনফিগ)
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+
+# 6. Logs & Debug Files (এরর লগ বা ক্যাশ ফাইল)
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.pnpm-debug.log*
+logs/
+*.log
+.cache/
