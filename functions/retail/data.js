@@ -1,11 +1,11 @@
 export async function onRequest(context) {
     const { request, env } = context;
-    const db = env.DB_RETAIL;
+    const db = env.retail;
 
     if (request.method === "POST") {
         const data = await request.json();
-        await db.prepare("INSERT INTO products (title, price, category, stock, created_at) VALUES (?, ?, ?, ?, ?)")
-                  .bind(data.title, data.price, data.category, data.stock, new Date().toISOString()).run();
+        await db.prepare("INSERT INTO products (title, price, category, stock, image_url, video_url, created_at) VALUES (?, ?, ?, ?, ?, ?, ?)")
+                  .bind(data.title, data.price, data.category, data.stock, data.imageUrl || "", data.videoUrl || "", new Date().toISOString()).run();
         return new Response(JSON.stringify({ success: true, message: "Retail product saved!" }), { headers: { "Content-Type": "application/json" } });
     }
 
