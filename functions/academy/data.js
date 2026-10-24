@@ -1,6 +1,6 @@
 export async function onRequest(context) {
     const { request, env } = context;
-    const db = env.DB_ACADEMY;
+    const db = env.academy; // আপনার বাইন্ডিং নেম অনুযায়ী
 
     if (request.method === "POST") {
         const data = await request.json();
