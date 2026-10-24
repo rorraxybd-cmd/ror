@@ -1,6 +1,6 @@
 export async function onRequest(context) {
     const { request, env } = context;
-    const db = env.DB_AFFILIATE;
+    const db = env.affiliate;
 
     if (request.method === "POST") {
         const data = await request.json();
