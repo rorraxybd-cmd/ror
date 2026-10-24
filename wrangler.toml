@@ -1,25 +1,39 @@
-name = "rorraxy"
-pages_build_output_dir = "."
-compatibility_date = "2026-10-24"
-
-# ==========================================
-# 1. Cloudflare D1 Database Configuration
-# ==========================================
 [[d1_databases]]
-binding = "DB"
-database_name = "rorraxy-db"
-database_id = "your_d1_database_id_here"
+binding = "DB_ACADEMY"
+database_name = "academy"
+database_id = "0c32e418-cc78-41c0-..." # D1 থেকে আপনার UUID
 
-# ==========================================
-# 2. Cloudflare R2 Object Storage Configuration
-# ==========================================
-[[r2_buckets]]
-binding = "BUCKET"
-bucket_name = "rorraxy-media-storage"
+[[d1_databases]]
+binding = "DB_BUSINESS"
+database_name = "business"
+database_id = "5311c967-583b-4636-..."
 
-# ==========================================
-# 3. Environment Variables (Non-secret)
-# ==========================================
-[vars]
-ENVIRONMENT = "production"
-SITE_URL = "https://rorraxy.com"
+[[d1_databases]]
+binding = "DB_CUSTOMER"
+database_name = "customer"
+database_id = "7b070bda-2f8a-4a39-..."
+
+[[d1_databases]]
+binding = "DB_RETAIL"
+database_name = "retail"
+database_id = "ad5b2b1d-bf47-4424-..."
+
+[[d1_databases]]
+binding = "DB_WHOLESALE"
+database_name = "wholesale"
+database_id = "67228ba0-8697-4b8f-..."
+
+[[d1_databases]]
+binding = "DB_SELLER"
+database_name = "seller"
+database_id = "22a8ccb2-dcd7-4714-..."
+
+[[d1_databases]]
+binding = "DB_AFFILIATE"
+database_name = "affiliate"
+database_id = "d92a657f-53e1-405b-..."
+
+[[d1_databases]]
+binding = "DB_ADMIN"
+database_name = "admin"
+database_id = "a0e539ea-d280-431f-..."
