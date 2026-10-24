@@ -1,0 +1,93 @@
+{
+  "platform": {
+    "name": "rorraxy",
+    "tagline": "All-In-One Global Ecosystem",
+    "motto": "Less is more, More is less",
+    "domain": "rorraxy.com",
+    "founder": "Mr Masudar",
+    "base_url": "https://rorraxy.com",
+    "contact": {
+      "general": "info@rorraxy.com",
+      "director": "director@rorraxy.com",
+      "support": "support@rorraxy.com"
+    }
+  },
+  "ecosystem_hubs": [
+    {
+      "id": "academy",
+      "name": "rorraxy Sci-Tech Academy",
+      "path": "/academy/",
+      "description": "Student enrollment, verification interfaces, and technical education portal."
+    },
+    {
+      "id": "solutions",
+      "name": "Business Ecosystem Solutions",
+      "path": "/solutions/",
+      "description": "Enterprise solutions and financial-accounting enterprise systems."
+    },
+    {
+      "id": "wholesale",
+      "name": "Wholesale Global Store",
+      "path": "/wholesale/",
+      "description": "B2B bulk ordering and global trade platform across 200+ countries."
+    },
+    {
+      "id": "retail",
+      "name": "Retail Global Store",
+      "path": "/retail/",
+      "description": "B2C retail commerce and modern product catalog."
+    },
+    {
+      "id": "managing_directors",
+      "name": "Managing Director Directory",
+      "path": "/management/managing.html",
+      "description": "Global partnership and country-wise managing director recruitment portal."
+    }
+  ],
+  "rules": [
+    {
+      "id": 1,
+      "keyword": "brand name",
+      "title": "Brand Naming Convention",
+      "content": "The brand name must always be written in lowercase letters as rorraxy."
+    },
+    {
+      "id": 2,
+      "keyword": "security",
+      "title": "Data Security & Passkey Authentication",
+      "content": "Strict Role-Based Access Control and Passkey-first authentication models ensure maximum security for admins, sellers, and affiliates."
+    },
+    {
+      "id": 3,
+      "keyword": "pricing",
+      "title": "Real-Time Multi-Currency Pricing",
+      "content": "Global prices are dynamically converted using live exchange rates supporting 200+ countries automatically."
+    }
+  ],
+  "global_settings": {
+    "supported_countries_count": 200,
+    "default_currency": "USD",
+    "auth_strategy": "Passkey-first, Email-recovery",
+    "pwa_enabled": true,
+    "architecture": "Single-Domain Folder Structure"
+  },
+  "products": [
+    {
+      "id": "p1",
+      "type": "retail",
+      "name": "Smart Luxury Watch",
+      "price_usd": 129.99,
+      "category": "Accessories",
+      "targetCountry": "GLOBAL"
+    },
+    {
+      "id": "p2",
+      "type": "wholesale",
+      "name": "Bulk Enterprise Sensor Node",
+      "price_usd": 45.00,
+      "min_qty": 50,
+      "category": "IoT Solutions",
+      "targetCountry": "GLOBAL"
+    }
+  ]
+}
