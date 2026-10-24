@@ -1,6 +1,6 @@
 export async function onRequest(context) {
     const { request, env } = context;
-    const db = env.DB_CUSTOMER;
+    const db = env.customer;
 
     if (request.method === "POST") {
         const data = await request.json();
