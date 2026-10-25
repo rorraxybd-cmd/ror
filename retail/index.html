@@ -47,15 +47,15 @@
     </header>
 
     <!-- 'You' মেনুর জন্য মডাল (account.js মডিউল দ্বারা পরিচালিত হবে) -->
-    <div id="youMenuModalOverlay" class="luxury-center-modal-overlay">
+    <div id="youMenuModalOverlay" class="luxury-center-modal-overlay" style="display: none;">
         <div class="luxury-center-modal-box" onclick="event.stopPropagation()">
             <button class="luxury-modal-close-btn" onclick="closeYouMenuModal()"><i class="fa-solid fa-xmark"></i></button>
             <img src="https://pub-508ef1e45bab487aadde85a1dba202c4.r2.dev/rorraxyfree/mr%20masudar%20logo%20(3).png" alt="Logo" class="luxury-modal-logo-large" onclick="navigateTo('/index.html')">
             
-            <h2 class="luxury-modal-title-top" id="accountTriggerBtn">USER PORTAL</h2>
+            <h2 class="luxury-modal-title-top">USER PORTAL</h2>
             <div class="luxury-options-fullstack">
-                <!-- account.js ফাইলের সাথে কানেক্টেড অপশন -->
-                <div class="luxury-action-btn-item" id="accountModuleBtn">
+                <!-- একাউন্ট.জেএস (account.js) কানেকশন -->
+                <div class="luxury-action-btn-item" id="accountModuleBtn" style="cursor: pointer;">
                     <div class="btn-left-part">
                         <i class="fa-solid fa-user"></i>
                         <div class="btn-text-stack">
@@ -65,8 +65,8 @@
                     </div>
                     <i class="fa-solid fa-arrow-right btn-right-arrow"></i>
                 </div>
-                <!-- seller/index.html -->
-                <div class="luxury-action-btn-item" onclick="navigateTo('/seller/index.html')">
+                <!-- সেলার পেজ: seller/index.html -->
+                <div class="luxury-action-btn-item" onclick="navigateTo('/seller/index.html')" style="cursor: pointer;">
                     <div class="btn-left-part">
                         <i class="fa-solid fa-chart-line"></i>
                         <div class="btn-text-stack">
@@ -76,8 +76,8 @@
                     </div>
                     <i class="fa-solid fa-arrow-right btn-right-arrow"></i>
                 </div>
-                <!-- affiliate.html -->
-                <div class="luxury-action-btn-item" onclick="navigateTo('/affiliate.html')">
+                <!-- অ্যাফিলিয়েট পেজ: affiliate.html -->
+                <div class="luxury-action-btn-item" onclick="navigateTo('/affiliate.html')" style="cursor: pointer;">
                     <div class="btn-left-part">
                         <i class="fa-solid fa-handshake"></i>
                         <div class="btn-text-stack">
@@ -91,7 +91,7 @@
         </div>
     </div>
 
-    <!-- প্রোডাক্ট ফিড (হোম পেজ / world = index.html) -->
+    <!-- প্রোডাক্ট ফিড (World = index.html) -->
     <main class="feed-container" id="productFeed">
         <!-- Product Card 1 (details.js এ প্রোডাক্ট আইডি অনুযায়ী কল হবে) -->
         <div class="product-card" data-category="new" data-product-id="PROD-RRX-001" onclick="openProductDetails('PROD-RRX-001')">
@@ -115,24 +115,29 @@
         </div>
     </main>
 
-    <!-- ৫টি নেভিগেশন মেনু (World, You, Video, Category, Card/Cart মডিউল জেএস ফাইলের সাথে সংযুক্ত) -->
+    <!-- ৫টি বটম নেভিগেশন মেনু (World, You, Video.js, Category.js, Card.js) -->
     <nav class="bottom-nav" id="bottomNav">
+        <!-- 1. World -> index.html -->
         <button class="nav-item" onclick="navigateTo('/index.html')">
             <i class="fa-solid fa-earth-americas"></i>
             <span>World</span>
         </button>
+        <!-- 2. You -> account.js modal -->
         <button class="nav-item" id="youNavBtn" onclick="openYouMenuModal(event)">
             <i class="fa-solid fa-user"></i>
             <span>You</span>
         </button>
+        <!-- 3. Video -> video.js -->
         <button class="nav-item" id="videoNavBtn">
             <i class="fa-brands fa-youtube"></i>
             <span>Video</span>
         </button>
+        <!-- 4. Category -> category.js -->
         <button class="nav-item" id="categoryNavBtn">
             <i class="fa-solid fa-magnifying-glass"></i>
             <span>Category</span>
         </button>
+        <!-- 5. Card -> card.js -->
         <button class="nav-item" id="cardNavBtn">
             <div class="cart-icon-box">
                 <svg class="cart-custom-svg" viewBox="0 0 24 24"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg>
@@ -142,15 +147,14 @@
         </button>
     </nav>
 
-    <!-- কোর ফাইলসমূহ এবং মডিউলার জেএস ফাইলগুলোর ইমপোর্ট কানেকশন -->
+    <!-- কোর ফাইলসমূহ -->
     <script src="/js/core.js"></script>
     <script src="/js/ui.js"></script>
     <script src="/js/security.js"></script>
     <script src="/js/image.js"></script>
-    <script src="/js/video.js"></script>
     <script src="/js/data.js"></script>
     
-    <!-- আপনার নির্দেশিত মডিউলার জেএস ফাইলগুলোর সুনির্দিষ্ট ইমপোর্ট ও এক্সপোর্ট স্ট্রাকচার -->
+    <!-- মডিউলার জেএস ফাইলগুলোর ইমপোর্ট এবং এক্সপোর্ট কানেকশন -->
     <script type="module">
         import { initAccountModule } from '/shop/account.js';
         import { initCardModule } from '/shop/card.js';
@@ -164,14 +168,16 @@
 
         window.openYouMenuModal = function(event) {
             if(event) event.stopPropagation();
-            document.getElementById('youMenuModalOverlay').style.display = 'flex';
+            const modal = document.getElementById('youMenuModalOverlay');
+            if(modal) modal.style.display = 'flex';
         };
 
         window.closeYouMenuModal = function() {
-            document.getElementById('youMenuModalOverlay').style.display = 'none';
+            const modal = document.getElementById('youMenuModalOverlay');
+            if(modal) modal.style.display = 'none';
         };
 
-        // প্রোডাক্টে ক্লিক করলে সরাসরি details.js ফাইলে প্রোডাক্ট আইডি পাস করে কল করবে
+        // প্রোডাক্টে ক্লিক করলে details.js ফাইলে প্রোডাক্ট আইডি পাস করে কল করবে
         window.openProductDetails = function(productId) {
             if (typeof renderProductDetails === 'function') {
                 renderProductDetails(productId);
@@ -181,29 +187,42 @@
         };
 
         document.addEventListener('DOMContentLoaded', () => {
-            // মডিউলার ফাংশন ইনিশিয়ালাইজেশন
+            // প্রতিটি মডিউলার জেএস ফাংশন ইনিশিয়ালাইজেশন
             if (typeof initAccountModule === 'function') initAccountModule();
             if (typeof initCardModule === 'function') initCardModule();
             if (typeof initVideoModule === 'function') initVideoModule();
             if (typeof initCategoryModule === 'function') initCategoryModule();
 
-            // মেনু বাটনে ক্লিক ইভেন্ট বাইন্ডিং
+            // একাউন্ট মডিউল বাটনে ক্লিক ইভেন্ট
             document.getElementById('accountModuleBtn')?.addEventListener('click', () => {
                 closeYouMenuModal();
                 if (typeof initAccountModule === 'function') initAccountModule();
             });
 
+            // ভিডিও মেনু ক্লিক ইভেন্ট
             document.getElementById('videoNavBtn')?.addEventListener('click', () => {
                 if (typeof initVideoModule === 'function') initVideoModule();
             });
 
+            // ক্যাটাগরি মেনু ক্লিক ইভেন্ট
             document.getElementById('categoryNavBtn')?.addEventListener('click', () => {
                 if (typeof initCategoryModule === 'function') initCategoryModule();
             });
 
+            // কার্ড/কার্ট মেনু ক্লিক ইভেন্ট
             document.getElementById('cardNavBtn')?.addEventListener('click', () => {
                 if (typeof initCardModule === 'function') initCardModule();
             });
+
+            // ব্যাকগ্রাউন্ড মডাল ক্লিকের হ্যান্ডলার
+            const modal = document.getElementById('youMenuModalOverlay');
+            if(modal) {
+                modal.onclick = function(event) {
+                    if (event.target === modal) {
+                        closeYouMenuModal();
+                    }
+                };
+            }
         });
     </script>
 </body>
