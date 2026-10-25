@@ -1,1 +1,210 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover">
+    <title>Mr. Masudar Enterprise - Retail Store</title>
+    
+    <!-- শপ মাস্টার CSS ফাইল -->
+    <link rel="stylesheet" href="/shop/shop.css">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://pub-508ef1e45bab487aadde85a1dba202c4.r2.dev">
+
+    <!-- Icons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="https://pub-508ef1e45bab487aadde85a1dba202c4.r2.dev/rorraxyfree/mr%20masudar%20logo%20(3).png">
+    <link rel="apple-touch-icon" href="https://pub-508ef1e45bab487aadde85a1dba202c4.r2.dev/rorraxyfree/mr%20masudar%20logo%20(3).png">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body id="mainBody">
+
+    <svg style="width:0;height:0;position:absolute;" aria-hidden="true" focusable="false">
+      <linearGradient id="goldGradientSvg" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#bf953f" />
+        <stop offset="25%" stop-color="#fcf6ba" />
+        <stop offset="50%" stop-color="#b38728" />
+        <stop offset="75%" stop-color="#fbf5b7" />
+        <stop offset="100%" stop-color="#aa771c" />
+      </linearGradient>
+    </svg>
+
+    <div class="floating-retail-badge">MR. MASUDAR ENTERPRISE</div>
+
+    <header class="app-header" id="mainHeader">
+        <div class="trending-marquee-bar">
+            <div class="marquee-container" id="marqueeContainer1">
+                <div class="marquee-group">
+                    <span class="txt-gold"><i class="fa-solid fa-crown"></i> Gamari Wood & Resin Crafts</span>
+                    <span class="txt-gold"><i class="fa-solid fa-gem"></i> Luxury Home Decor</span>
+                    <span class="txt-gold"><i class="fa-solid fa-star"></i> E-Commerce Retail & Wholesale</span>
+                    <span class="txt-gold"><i class="fa-solid fa-fire"></i> Global Dropshipping</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 'You' মেনুর জন্য মডাল (account.js মডিউল দ্বারা পরিচালিত হবে) -->
+    <div id="youMenuModalOverlay" class="luxury-center-modal-overlay">
+        <div class="luxury-center-modal-box" onclick="event.stopPropagation()">
+            <button class="luxury-modal-close-btn" onclick="closeYouMenuModal()"><i class="fa-solid fa-xmark"></i></button>
+            <img src="https://pub-508ef1e45bab487aadde85a1dba202c4.r2.dev/rorraxyfree/mr%20masudar%20logo%20(3).png" alt="Logo" class="luxury-modal-logo-large" onclick="navigateTo('/index.html')">
+            
+            <h2 class="luxury-modal-title-top" id="accountTriggerBtn">USER PORTAL</h2>
+            <div class="luxury-options-fullstack">
+                <!-- account.js ফাইলের সাথে কানেক্টেড অপশন -->
+                <div class="luxury-action-btn-item" id="accountModuleBtn">
+                    <div class="btn-left-part">
+                        <i class="fa-solid fa-user"></i>
+                        <div class="btn-text-stack">
+                            <span class="btn-main-title">My Account</span>
+                            <span class="explore-subtxt">account.js</span>
+                        </div>
+                    </div>
+                    <i class="fa-solid fa-arrow-right btn-right-arrow"></i>
+                </div>
+                <!-- seller/index.html -->
+                <div class="luxury-action-btn-item" onclick="navigateTo('/seller/index.html')">
+                    <div class="btn-left-part">
+                        <i class="fa-solid fa-chart-line"></i>
+                        <div class="btn-text-stack">
+                            <span class="btn-main-title">Seller Portal</span>
+                            <span class="explore-subtxt">seller/index.html</span>
+                        </div>
+                    </div>
+                    <i class="fa-solid fa-arrow-right btn-right-arrow"></i>
+                </div>
+                <!-- affiliate.html -->
+                <div class="luxury-action-btn-item" onclick="navigateTo('/affiliate.html')">
+                    <div class="btn-left-part">
+                        <i class="fa-solid fa-handshake"></i>
+                        <div class="btn-text-stack">
+                            <span class="btn-main-title">Affiliate Program</span>
+                            <span class="explore-subtxt">affiliate.html</span>
+                        </div>
+                    </div>
+                    <i class="fa-solid fa-arrow-right btn-right-arrow"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- প্রোডাক্ট ফিড (হোম পেজ / world = index.html) -->
+    <main class="feed-container" id="productFeed">
+        <!-- Product Card 1 (details.js এ প্রোডাক্ট আইডি অনুযায়ী কল হবে) -->
+        <div class="product-card" data-category="new" data-product-id="PROD-RRX-001" onclick="openProductDetails('PROD-RRX-001')">
+            <div class="product-media-box">
+                <div class="product-country-discount-badge">
+                    <img src="https://flagcdn.com/w20/bd.png" alt="BD" class="flag-icon"> 44% OFF
+                </div>
+                <img src="https://pub-508ef1e45bab487aadde85a1dba202c4.r2.dev/rorraxyfree/rorraxy%201%20file/rorraxy%20(1).jpg" alt="Product Image" loading="lazy">
+            </div>
+            <div class="card-footer-actions" onclick="event.stopPropagation()">
+                <span class="product-price-tag" data-base-price="100.00">$100.00</span>
+                <div class="card-sub-actions">
+                    <div class="love-action card-love-btn" onclick="toggleLove(event, this)">
+                        <i class="fa-solid fa-heart"></i> <span class="love-count">500</span>
+                    </div>
+                    <button class="share-action-btn" onclick="openInlineShare(event, this)">
+                        <i class="fa-solid fa-share-nodes"></i> Share
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- ৫টি নেভিগেশন মেনু (World, You, Video, Category, Card/Cart মডিউল জেএস ফাইলের সাথে সংযুক্ত) -->
+    <nav class="bottom-nav" id="bottomNav">
+        <button class="nav-item" onclick="navigateTo('/index.html')">
+            <i class="fa-solid fa-earth-americas"></i>
+            <span>World</span>
+        </button>
+        <button class="nav-item" id="youNavBtn" onclick="openYouMenuModal(event)">
+            <i class="fa-solid fa-user"></i>
+            <span>You</span>
+        </button>
+        <button class="nav-item" id="videoNavBtn">
+            <i class="fa-brands fa-youtube"></i>
+            <span>Video</span>
+        </button>
+        <button class="nav-item" id="categoryNavBtn">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <span>Category</span>
+        </button>
+        <button class="nav-item" id="cardNavBtn">
+            <div class="cart-icon-box">
+                <svg class="cart-custom-svg" viewBox="0 0 24 24"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg>
+                <span class="cart-badge-circle empty-badge" id="floatingCartItemCountBadge">0</span>
+            </div>
+            <span>Card</span>
+        </button>
+    </nav>
+
+    <!-- কোর ফাইলসমূহ এবং মডিউলার জেএস ফাইলগুলোর ইমপোর্ট কানেকশন -->
+    <script src="/js/core.js"></script>
+    <script src="/js/ui.js"></script>
+    <script src="/js/security.js"></script>
+    <script src="/js/image.js"></script>
+    <script src="/js/video.js"></script>
+    <script src="/js/data.js"></script>
+    
+    <!-- আপনার নির্দেশিত মডিউলার জেএস ফাইলগুলোর সুনির্দিষ্ট ইমপোর্ট ও এক্সপোর্ট স্ট্রাকচার -->
+    <script type="module">
+        import { initAccountModule } from '/shop/account.js';
+        import { initCardModule } from '/shop/card.js';
+        import { initVideoModule } from '/shop/video.js';
+        import { initCategoryModule } from '/shop/category.js';
+        import { renderProductDetails } from '/shop/details.js';
+
+        window.navigateTo = function(url) {
+            window.location.href = url;
+        };
+
+        window.openYouMenuModal = function(event) {
+            if(event) event.stopPropagation();
+            document.getElementById('youMenuModalOverlay').style.display = 'flex';
+        };
+
+        window.closeYouMenuModal = function() {
+            document.getElementById('youMenuModalOverlay').style.display = 'none';
+        };
+
+        // প্রোডাক্টে ক্লিক করলে সরাসরি details.js ফাইলে প্রোডাক্ট আইডি পাস করে কল করবে
+        window.openProductDetails = function(productId) {
+            if (typeof renderProductDetails === 'function') {
+                renderProductDetails(productId);
+            } else {
+                window.location.href = `pd.html?id=${productId}`;
+            }
+        };
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // মডিউলার ফাংশন ইনিশিয়ালাইজেশন
+            if (typeof initAccountModule === 'function') initAccountModule();
+            if (typeof initCardModule === 'function') initCardModule();
+            if (typeof initVideoModule === 'function') initVideoModule();
+            if (typeof initCategoryModule === 'function') initCategoryModule();
+
+            // মেনু বাটনে ক্লিক ইভেন্ট বাইন্ডিং
+            document.getElementById('accountModuleBtn')?.addEventListener('click', () => {
+                closeYouMenuModal();
+                if (typeof initAccountModule === 'function') initAccountModule();
+            });
+
+            document.getElementById('videoNavBtn')?.addEventListener('click', () => {
+                if (typeof initVideoModule === 'function') initVideoModule();
+            });
+
+            document.getElementById('categoryNavBtn')?.addEventListener('click', () => {
+                if (typeof initCategoryModule === 'function') initCategoryModule();
+            });
+
+            document.getElementById('cardNavBtn')?.addEventListener('click', () => {
+                if (typeof initCardModule === 'function') initCardModule();
+            });
+        });
+    </script>
+</body>
+</html>
